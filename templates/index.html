@@ -9,25 +9,18 @@
        <br><br>
     </div>
     <div id="content">
+        <ul>
+            <h2>Projects</h2>
+            {% for project in projects %}
+                <li><a href='{{ project[1] }}'>{{ project[0] }}</a></li>
+            {% endfor %}
+        </ul>
 
-        <div id="github-badge"></div>
-        <script type="text/javascript" charset="utf-8">
-          GITHUB_USERNAME="cobrateam";
-          GITHUB_TITLE = "Projects"
-        </script>
         <ul>
             <h2>Developers</h2>
-            <li><a href="http://github.com/andrewsmedina/">Andrews Medina</a></li>
-            <li><a href="http://github.com/douglascamata">Douglas Camata</a></li>
-            <li><a href="http://github.com/diofeher/">Diógenes Augusto</a></li>
-            <li><a href="http://github.com/ricobl">Enrico Batista da Luz</a></li>
-            <li><a href="http://github.com/flavioribeiro/">Flávio Ribeiro</a></li>
-            <li><a href="http://github.com/fabiomcosta">Fábio M. Costa</a></li>
-            <li><a href="http://github.com/franciscosouza">Francisco Souza</a></li>
-            <li><a href="http://github.com/hugobr">Hugo Lopes Tavares</a></li>
-            <li><a href="http://github.com/igorsobreira/">Igor Sobreira</a></li>
-            <li><a href="http://github.com/osantana">Osvaldo Santana</a></li>
-            <li><a href="http://github.com/thiagoss">Thiago Santos</a></li>
+            {% for user in members %}
+                <li><a href='http://github.com/{{ user[1] }}'>{{ user[0] }}</a></li>
+            {% endfor %}
         </ul>
 
         <ul>
@@ -54,6 +47,5 @@
      })();
 
     </script>
-    <script src="http://drnic.github.com/github-badges/dist/github-badge-launcher.js" type="text/javascript"></script>
 </body>
 </html>
