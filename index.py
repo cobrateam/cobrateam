@@ -15,7 +15,7 @@ def index():
 def get_members():
     users = simplejson.load(urlopen('https://github.com/api/v2/json/organizations/cobrateam/public_members'))
     members = []
-    for user in users['users']:
+    for user in sorted(users['users'], key=lambda x: x['name']):
         members.append((user['name'], user['login']))
 
     return members
