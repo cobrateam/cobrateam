@@ -12,7 +12,7 @@
         <ul>
             <h2>Projects</h2>
             {% for project in projects %}
-                <li><a href='{{ project[1] }}'>{{ project[0] }}</a></li>
+                <li><a href='{{ project[1] }}'>{{ project[0] }}</a> - {{ project[2] }}</li>
             {% endfor %}
         </ul>
 
