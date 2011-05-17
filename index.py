@@ -1,3 +1,4 @@
+from decorators import minified_response
 from flask import Flask, render_template
 from urllib2 import urlopen
 import simplejson
@@ -5,6 +6,7 @@ import simplejson
 app = Flask("CobraTeam Website")
 
 @app.route("/")
+@minified_response
 def index():
     members = get_members()
     projects = get_projects()
@@ -21,8 +23,8 @@ def get_members():
 def get_projects():
     repositories = simplejson.load(urlopen('https://github.com/api/v2/json/organizations/cobrateam/public_repositories'))
     projects = []
-    for project in repositories['repositories']:
-        projects.append((project['name'], project['url']))
+    for project in sorted(repositories['repositories'], key=lambda x: x['name']):
+        projects.append((project['name'], project['url'], project['description']))
 
     return projects
 
