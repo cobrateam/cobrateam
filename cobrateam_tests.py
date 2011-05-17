@@ -16,10 +16,10 @@ class CobraTeamTestCase(unittest.TestCase):
         @index.app.route("/bla-bla-bla")
         @minified_response
         def bla_bla_bla():
-            return '<html>    <body>Hello world</body>    </html>'
+            return u'<html>    <body>Hello world</body>    </html>'
 
         response = self.app.get('/bla-bla-bla')
-        self.assertEqual('<html><body>Hello world</body></html>', response.data)
+        self.assertEqual(u'<html><body>Hello world</body></html>', response.data)
 
 if __name__ == '__main__':
     unittest.main()
