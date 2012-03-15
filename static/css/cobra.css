@@ -1,0 +1,90 @@
+* {
+    font-family: Nixie One, serif;
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.tooltip-arrow{
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+a{
+    text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+a:hover, a:active{
+    color: #A0A0A0;
+    text-decoration: none;
+}
+
+body{
+    color: #333;
+    background-color: #F3F3F3;
+    background: radial-gradient(#D0D0D0, #FFF);
+    /* Safari 4-5, Chrome 1-9 */ 
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#D0D0D0), to(#FAFAFA)); 
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(#D0D0D0, #FAFAFA); 
+    /* Firefox 3.6+ */ 
+    background: -moz-radial-gradient(#D0D0D0, #FAFAFA); 
+    /* IE 10 */ 
+    background: -ms-radial-gradient(#D0D0D0, #FAFAFA);
+    /* Opera ? */
+    background: -o-radial-gradient(#D0D0D0, #FAFAFA);
+    /* Opera 12 */
+    background-image: radial-gradient(#D0D0D0, #FAFAFA);
+}
+
+li {
+    list-style: none;
+}
+
+h2{
+    margin: 40px 0;
+}
+
+
+#cobrateam{
+    text-align: center;    
+    margin: 20px;
+    font-family: 'Bitter', serife;
+    font-size:70px;
+    color: #101010;
+    text-shadow: 1px 1px 2px #5F5F5F;
+    filter: dropshadow(color=#5F5F5F, offx=1, offy=1);
+    
+    line-height: 80px;
+}
+
+#projects li {
+    margin: 7px 0;
+}
+
+
+#developers li{
+    background: #EAEAEA;
+    border: 1px solid #CCCCCC;
+    margin:4px;
+    padding:4px;
+    width:80px;
+    height:80px;
+    white-space: nowrap;
+    position:relative;
+    overflow: hidden;
+    float:left;
+}
+
+#developers li:hover{
+    background: #FFF;
+}
+
+#footer{
+    margin-bottom:60px;
+}
