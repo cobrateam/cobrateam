@@ -28,17 +28,11 @@ body{
     color: #333;
     background-color: #F3F3F3;
     background: radial-gradient(#D0D0D0, #FFF);
-    /* Safari 4-5, Chrome 1-9 */ 
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#D0D0D0), to(#FAFAFA)); 
-    /* Safari 5.1+, Chrome 10+ */
-    background: -webkit-radial-gradient(#D0D0D0, #FAFAFA); 
-    /* Firefox 3.6+ */ 
-    background: -moz-radial-gradient(#D0D0D0, #FAFAFA); 
-    /* IE 10 */ 
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#D0D0D0), to(#FAFAFA));
+    background: -webkit-radial-gradient(#D0D0D0, #FAFAFA);
+    background: -moz-radial-gradient(#D0D0D0, #FAFAFA);
     background: -ms-radial-gradient(#D0D0D0, #FAFAFA);
-    /* Opera ? */
     background: -o-radial-gradient(#D0D0D0, #FAFAFA);
-    /* Opera 12 */
     background-image: radial-gradient(#D0D0D0, #FAFAFA);
 }
 
@@ -58,8 +52,7 @@ h2{
     font-size:70px;
     color: #101010;
     text-shadow: 1px 1px 2px #5F5F5F;
-    filter: dropshadow(color=#5F5F5F, offx=1, offy=1);
-    
+    filter: dropshadow(color=#5F5F5F, offx=1, offy=1);  
     line-height: 80px;
 }
 
@@ -67,6 +60,9 @@ h2{
     margin: 7px 0;
 }
 
+#prj_name, #prj_description{
+    margin-right: 10px;
+}
 
 #developers li{
     background: #EAEAEA;
@@ -87,4 +83,27 @@ h2{
 
 #footer{
     margin-bottom:60px;
+}
+
+@media (max-width: 480px) { 
+    #cobrateam{
+        font-size:35px;
+        line-height: 35px;
+        margin: 20px;
+    }
+    h2{
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 14px;
+    }
+    #developers li{
+        margin: 0;
+    }
+    #developers li, #developers li img{
+        width:60px;
+        height:60px;
+    }
+    #prj_name, #prj_description{
+        display: block;
+    }
 }

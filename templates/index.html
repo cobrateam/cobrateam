@@ -8,6 +8,7 @@
     <meta name="author" content="CobraTeam">
     
     <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="static/css/cobra.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Bitter:700|Nixie+One' rel='stylesheet' type='text/css'>
     
@@ -26,7 +27,10 @@
                 <ul id="projects">
                     <h2>Projects</h2>
                     {% for project in projects %}
-                        <li><a href='{{ project[1] }}' target="_blank">{{ project[0] }}</a> - {{ project[2] }}</li>
+                        <li>
+                            <span id="prj_name"><a href='{{ project[1] }}' target="_blank">{{ project[0] }}</a></span>
+                            <span id="prj_description">{{ project[2] }}</span>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
