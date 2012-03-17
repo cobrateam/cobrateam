@@ -110,4 +110,7 @@ h2{
     #prj_name, #prj_description{
         display: block;
     }
+    #facebook{
+        margin:20px 0 0 25px;
+    }
 }
