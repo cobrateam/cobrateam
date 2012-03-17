@@ -40,8 +40,12 @@ li {
     list-style: none;
 }
 
-h2, #facebook{
+h2{
     margin: 40px 0;
+}
+
+#facebook{
+    margin: 40px 0 0 34px;
 }
 
 
