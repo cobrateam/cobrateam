@@ -23,7 +23,7 @@ def get_members():
 def get_projects():
     repositories = simplejson.load(urlopen('https://github.com/api/v2/json/organizations/cobrateam/public_repositories'))
     projects = []
-    for project in reversed(repositories['repositories'], key=lambda x: x['watchers']):
+    for project in reversed(sorted(repositories['repositories'], key=lambda x: x['watchers'])):
         projects.append((project['name'], project['url'], project['description']))
 
     return projects
