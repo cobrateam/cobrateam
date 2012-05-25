@@ -34,7 +34,7 @@
                     <h2>Projects</h2>
                     {% for project in projects %}
                         <li>
-                            <span id="prj_name"><a href='{{ project[1] }}' target="_blank">{{ project[0] }}</a></span>
+                            <span id="prj_name"><a href='{{ project[1] }}'>{{ project[0] }}</a></span>
                             <span id="prj_description">{{ project[2] }}</span>
                         </li>
                     {% endfor %}
@@ -45,7 +45,7 @@
                     <h2>Developers</h2>
                     {% for user in members %}
                         <li title="{{ user[0] }}">
-                            <a href="http://github.com/{{ user[1] }}" target="_blank">
+                            <a href="http://github.com/{{ user[1] }}">
                                 <img src="http://www.gravatar.com/avatar/{{ user[2] }}" alt="{{ user[0] }}">
                             </a>
                         </li>
@@ -58,7 +58,7 @@
             <div class="span6">
                 <ul>
                     <h2>Contact</h2>
-                    <li><a href="http://webchat.freenode.net/?channels=#cobrateam" target="_blank">#cobrateam</a> at irc.freenode.net</li>
+                    <li><a href="http://webchat.freenode.net/?channels=#cobrateam">#cobrateam</a> at irc.freenode.net</li>
                 </ul>
             </div>
             <div class="span6">
